@@ -127,3 +127,25 @@ a:link {
         font-size: 1.2rem;
     }
 }
+
+/* Lists */
+.list {
+    list-style: none;
+    padding-left: 0;
+    color: var(--heading-color);
+}
+
+.list-inline li {
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+.list-tick {
+    list-style-image: url(../images/tick.svg);
+    margin-left: 3rem;
+}
+
+.list-tick li {
+    margin-right: 5px;
+    margin-bottom: 1rem;
+}
