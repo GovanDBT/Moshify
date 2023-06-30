@@ -5,6 +5,7 @@
     --accent-color: #ff3400;
     --heading-color: #1b0760;
     --text-color: #918ca4;
+    --white-text: #fff;
 }
 
 *, *::after, *::before {
@@ -13,7 +14,7 @@
 
 ::selection {
     background-color: var(--accent-color);
-    color: #fff;
+    color: var(--white-text);
 }
 
 /* Typography */
@@ -90,5 +91,39 @@ a:link {
 @media screen and (min-width: 1024px) {
     .link-arrow {
         font-size: 1.5rem;
+    }
+}
+
+/* Badges */
+.badge {
+    font-size: 2rem;
+    background: grey;
+    color: var(--white-text);
+    padding: 0.5rem 2rem;
+    border-radius: 20px;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.badge-primary {
+    background: var(--primary-color);
+}
+
+.badge-secondary {
+    background: var(--secondary-color);
+}
+
+.badge-small {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 1024px) {
+    .badge {
+        font-size: 1.5rem;
+    }
+
+    .badge-small {
+        font-size: 1.2rem;
     }
 }
