@@ -149,3 +149,27 @@ a:link {
     margin-right: 5px;
     margin-bottom: 1rem;
 }
+
+/* icons */
+
+/*FIXME: for security reasons svg sprite cannot display using the normal path
+in the browser, use a localhost server for them to display*/
+.icon { 
+  width: 1rem; 
+  height: 1rem;
+}
+
+.icon-primary {
+    fill: var(--primary-color);
+}
+
+.icon-container {
+    background-color: #f3f9fa;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    width: 64px;
+    border-radius: 100%;
+}
+
