@@ -116,6 +116,7 @@ a:link {
 .badge-small {
     font-size: 1.6rem;
     text-transform: uppercase;
+    padding: 0.5rem 1.5rem;
 }
 
 @media screen and (min-width: 1024px) {
@@ -147,7 +148,9 @@ a:link {
 
 .list-tick li {
     margin-right: 5px;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
 }
 
 /* icons */
@@ -297,7 +300,68 @@ in the browser, use a localhost server for them to display*/
     color: #fff;
 }
 
+.card-secondary .badge-secondary {
+    background: #05c5e7;
+}
+
 .card-heading .card-header {
     background: var(--heading-color);
     color: #fff;
+}
+
+/* Plan */
+.plan .card {
+    border: none;
+    width: 400px;
+    margin: 10px;
+    box-shadow: 0 0 20px 10px #f3f3f3;
+}
+
+.card-header p {
+    margin-bottom: 0;
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.plan-title {
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: #fff;
+    margin: 0;
+}
+
+.plan-billing {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.plan-price {
+    font-weight: 500;
+    font-size: 6rem;
+}
+
+.plan-popular .card-header {
+    position: relative;
+}
+
+.plan-popular .card-header::before {
+    content: url(../images/popular.svg);
+    width: 40px;
+    position: absolute;
+    top: -6px;
+    right: 5%;
+}
+
+@media screen and (min-width: 1024px) {
+    .plan-title {
+        font-size: 1.4rem;
+    }
+
+    .plan-price {
+        font-size: 5rem;
+    }
+
+    .card-header p {
+        font-size: 1.7rem;
+    }
 }
