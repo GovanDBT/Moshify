@@ -275,3 +275,29 @@ in the browser, use a localhost server for them to display*/
     margin: 0;
     padding: 1.8rem 3rem;
 }
+
+/* Card */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-header, .card-body {
+    padding: 2rem 3rem;
+}
+
+.card-primary .card-header {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.card-secondary .card-header {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+.card-heading .card-header {
+    background: var(--heading-color);
+    color: #fff;
+}
