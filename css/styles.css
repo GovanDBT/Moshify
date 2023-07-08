@@ -3,9 +3,9 @@
     --primary-color: #2584ff;
     --secondary-color: #00d9ff;
     --accent-color: #ff3400;
+    --dark-accent-color: #dd3c14fd;
     --heading-color: #1b0760;
     --text-color: #918ca4;
-    --white-text: #fff;
 }
 
 *, *::after, *::before {
@@ -14,7 +14,7 @@
 
 ::selection {
     background-color: var(--accent-color);
-    color: var(--white-text);
+    color: #fff;
 }
 
 /* Typography */
@@ -98,7 +98,7 @@ a:link {
 .badge {
     font-size: 2rem;
     background: grey;
-    color: var(--white-text);
+    color: #fff;
     padding: 0.5rem 2rem;
     border-radius: 20px;
     white-space: nowrap;
@@ -173,3 +173,67 @@ in the browser, use a localhost server for them to display*/
     border-radius: 100%;
 }
 
+/* Buttons */
+.btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 40px;
+    padding: 1rem 5rem;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    margin: 1rem 0;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #2c76d6;
+}
+
+.btn-secondary {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background: #0bc3e4;
+}
+
+.btn-accent {
+    background: var(--accent-color);
+    color: #fff;
+}
+
+.btn-accent:hover {
+    background: rgb(235, 56, 11)0;
+}
+
+.btn-outline {
+    color: var(--heading-color);
+    background: none;
+    border: 2px solid var(--heading-color);
+}
+
+.btn-outline:hover {
+    background: var(--heading-color);
+    color: #fff;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+    .btn {
+        font-size: 1.5rem;
+    }
+}
