@@ -34,6 +34,7 @@ body {
 h1, h2, h3 {
     color: var(--heading-color);
     margin-bottom: 0.8rem;
+    line-height: 1.1;
 }
 
 h1 {
@@ -492,7 +493,7 @@ in the browser, use a localhost server for them to display*/
     }
 }
 
-/* Testimonial */
+/* Testimonial Section */
 .testimonial {
     border: none;
     box-shadow: 0 0 10px 20px #f3f3f3;
@@ -623,12 +624,12 @@ in the browser, use a localhost server for them to display*/
 
 .block-skewed-right {
     padding-bottom: calc(var(--padding-vertical) + 4rem);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
 }
 
 .block-skewed-left {
     padding-bottom: calc(var(--padding-vertical) + 4rem);
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 }
 
 .container {
@@ -702,5 +703,32 @@ in the browser, use a localhost server for them to display*/
     .nav-list li {
         border: none;
         font-size: 1.6rem;
+    }
+}
+
+/* Hero Section*/
+.hero {
+    padding-bottom: 6rem;
+}
+
+.banner {
+    width: 100%;
+    transform: translateY(-80px);
+}
+
+.hero-tagline {
+    font-size: 2rem;
+    color: #b9c3cf;
+    letter-spacing: 1px;
+}
+
+@media screen and (min-width: 768px) {
+    .hero {
+        padding-top: 0;
+    }
+
+    .hero-content {
+        text-align: left;
+        align-self: center;
     }
 }
