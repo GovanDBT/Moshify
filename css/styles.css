@@ -635,3 +635,72 @@ in the browser, use a localhost server for them to display*/
     max-width: 1140px;
     margin: 0 auto;
 }
+
+/* Navigation */
+.nav {
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+}
+
+.nav-list {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+.nav-list li {
+    padding: 0.5rem 2rem;
+    border-bottom: 1px solid #222;
+    white-space: nowrap;
+}
+
+.nav-list li a {
+    color: #d2d0db;
+    transition: color .3s ease;
+}
+
+.nav-list li a:hover {
+    color: #fff;
+}
+
+.nav-toggler {
+    opacity: .5;
+    cursor: pointer;
+    transition: opacity .3s ease;
+}
+
+.nav-toggler:hover {
+    opacity: 1;
+}
+
+.nav.collapsible-expanded .nav-toggler {
+    opacity: 1;
+    transition: opacity .3s ease;
+}
+
+.nav-logo {
+    transform: translateY(5px);
+}
+
+@media screen and (min-width: 1024px) {
+    .nav-toggler {
+        display: none;
+    }
+
+    .nav-list {
+        width: auto;
+        text-align: left;
+        display: flex;
+        max-height: 100%; /*shows the nav*/
+        opacity: 1; /*shows the nav*/
+    }
+
+    .nav-list li {
+        border: none;
+        font-size: 1.6rem;
+    }
+}
