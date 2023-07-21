@@ -334,6 +334,10 @@ in the browser, use a localhost server for them to display*/
     color: #fff;
 }
 
+.card-primary .badge-primary {
+    background: #2176e4;
+}
+
 .card-secondary .card-header {
     background: var(--secondary-color);
     color: #fff;
@@ -368,13 +372,21 @@ in the browser, use a localhost server for them to display*/
 }
 
 .plan-billing {
-    display: inline-block;
+    display: inline;
     margin-right: 1rem;
 }
 
 .plan-price {
     font-weight: 500;
     font-size: 6rem;
+}
+
+.plan-popular {
+    transform: scale(1.1);
+}
+
+.plan-popular.card {
+    box-shadow: 0 0 30px 5px #cfcfcf;
 }
 
 .plan-popular .card-header {
@@ -653,10 +665,6 @@ in the browser, use a localhost server for them to display*/
     margin: 0 auto;
 }
 
-@media screen and (min-width: 1024px) {
-    
-}
-
 /* Navigation */
 .nav {
     background: #000;
@@ -782,3 +790,28 @@ in the browser, use a localhost server for them to display*/
         grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     }
 }
+
+/* Block plan */
+.block-plan .grid {
+    gap: 4.5rem;
+}
+
+.block-plan .card {
+    max-width: 500px;
+    transition: transform .3s ease;
+}
+
+.block-plan .card-secondary:hover {
+    transform: scale(1.02);
+}
+
+.block-plan .plan-popular:hover {
+    transform: scale(1.12);
+}
+
+@media screen and (max-width: 1024px) {
+    .block-plan .grid {
+        justify-items: center;
+    }
+}
+
