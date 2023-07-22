@@ -203,6 +203,11 @@ in the browser, use a localhost server for them to display*/
     border-radius: 100%;
 }
 
+.feature-block .icon-container {
+    height: 50px;
+    width: 50px;
+}
+
 /* Buttons */
 .btn {
     text-transform: uppercase;
@@ -812,6 +817,38 @@ in the browser, use a localhost server for them to display*/
 @media screen and (max-width: 1024px) {
     .block-plan .grid {
         justify-items: center;
+    }
+}
+
+/* Features section*/
+.feature {
+    gap: 4rem 3rem;
+    margin: 12rem 0;
+}
+
+.feature:first-of-type {
+    margin-top: 6rem;
+}
+
+.feature .media {
+    display: block;
+}
+
+.feature .media-image {
+    margin: 0 0 1rem;
+}
+
+.feature .media-body {
+    margin: 0;
+}
+
+.feature-image {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .feature:nth-of-type(even) .media {
+        order: 2;
     }
 }
 
