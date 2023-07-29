@@ -27,7 +27,7 @@ html {
 body {
     font-family: Inter, Arial, Helvetica, sans-serif;
     color: var(--text-color);
-    font-size: 2.4rem;
+    font-size: 1.6rem;
     line-height: 1.5;
 }
 
@@ -46,7 +46,7 @@ h2 {
 }
 
 h3 {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 p {
@@ -67,11 +67,7 @@ p {
     }
 
     h3 {
-        font-size: 2.4rem;
-    }
-
-    p {
-        width: 60ch;
+        font-size: 1.8rem;
     }
 }
 
@@ -651,7 +647,9 @@ in the browser, use a localhost server for them to display*/
     color: #7b858b;
 }
 
-.block-dark .block-heading {
+.block-dark h1,
+.block-dark h2,
+.block-dark h3 {
     color: #fff;
 }
 
@@ -849,6 +847,42 @@ in the browser, use a localhost server for them to display*/
 @media screen and (min-width: 768px) {
     .feature:nth-of-type(even) .media {
         order: 2;
+    }
+}
+
+/* Showcase section */
+.showcase {
+    padding-bottom: 12rem;
+}
+
+.showcase .block-header {
+    margin-bottom: 5rem;
+}
+
+.showcase-image > img {
+    width: 100%;
+}
+
+.showcase .media {
+    margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+    .showcase .grid {
+        grid-template-columns: 50% 50%;
+    }
+    
+    .showcase-image {
+        justify-self: end;
+    }
+
+    .showcase-image > img {
+        width: auto;
+        max-width: 700px;
+    }
+
+    .showcase {
+        padding-bottom: 6rem;
     }
 }
 
