@@ -159,6 +159,10 @@ a:link {
     letter-spacing: 1px;
 }
 
+.block-dark .list {
+    color: #fff;
+}
+
 /* icons */
 
 /*FIXME: for security reasons svg sprite cannot display using the normal path
@@ -603,10 +607,13 @@ in the browser, use a localhost server for them to display*/
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 2rem;
+    transition: padding-bottom .3s ease;
 }
 
 .collapsible-heading {
     margin-top: 0;
+    font-size: 2.6rem;
 }
 
 .collapsible-chev {
@@ -621,6 +628,10 @@ in the browser, use a localhost server for them to display*/
     transition: all .3s ease;
 }
 
+.collapsible-expanded .collapsible-header {
+    padding-bottom: 0;
+}
+
 .collapsible-expanded .collapsible-chev {
     transform: rotate(0);
 }
@@ -628,6 +639,16 @@ in the browser, use a localhost server for them to display*/
 .collapsible-expanded .collapsible-content {
     max-height: 100vh;
     opacity: 1;
+}
+
+@media screen and (min-width: 1024px) {
+    .collapsible-header {
+        margin: 0;
+    }
+
+    .collapsible-heading {
+        font-size: 1.6rem;
+    }
 }
 
 /* Blocks */
@@ -889,4 +910,82 @@ in the browser, use a localhost server for them to display*/
     }
 }
 
+/* Footer */
+.footer.block-dark {
+    background: #232323;
+}
+
+.footer-grid {
+    column-gap: 4rem;
+}
+
+.footer .collapsible {
+    border-bottom: 1px solid #393939;
+    margin-bottom: 2rem;
+}
+
+.footer-heading {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+
+.footer .list {
+    margin-top: 0;
+}
+
+.footer a, li {
+    color: #777;
+    margin: 1.5rem 0;
+    text-transform: capitalize;
+    transition: color .3s ease;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+.footer-brand {
+    text-align: center;
+}
+
+.footer-brand img {
+    width: 100%;
+    max-width: 230px;
+}
+
+.footer-copyright {
+    font-size: 2.1rem;
+    color: #fff;
+    opacity: 0.3;
+}
+
+@media screen and (min-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+
+    .footer .collapsible {
+        border: none;
+        margin: 0;
+    }
+
+    .footer .collapsible-content {
+        font-size: 1.3rem;
+        max-height: 100vh;
+        opacity: 1;
+    }
+
+    .footer .collapsible-chev {
+        display: none;
+    }
+
+    .footer-brand {
+        order: -1;
+    }
+
+    .footer-copyright {
+        font-size: 1.2rem;
+    }
+}
 
