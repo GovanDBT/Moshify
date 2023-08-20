@@ -139,7 +139,6 @@ a:link {
 .list {
     list-style: none;
     padding-left: 0;
-    color: var(--heading-color);
 }
 
 .list-inline li {
@@ -276,12 +275,30 @@ in the browser, use a localhost server for them to display*/
 }
 
 .btn-stretched {
-    padding: 2rem 8rem;
+    padding: 2rem 5rem;
+}
+
+@media screen and (max-width: 375px) {
+    .input-group .btn {
+        padding: 1rem 3rem;
+    }
+    .btn .icon {
+        margin: 0;
+    }
+
+    .btn-search-name {
+        display: none;
+        margin: 0;
+    }
 }
 
 @media screen and (min-width: 1024px) {
     .btn {
         font-size: 1.5rem;
+    }
+
+    .btn-stretched {
+        padding: 2rem 8rem;
     }
 }
 
@@ -289,7 +306,7 @@ in the browser, use a localhost server for them to display*/
 .input {
     border-radius: 40px;
     outline: none;
-    padding: 1.5rem 3rem;
+    padding: 1.5rem 4vw;
     border: 1px solid #ccc;
     color: var(--heading-color);
     font-size: 1.7rem;
@@ -316,6 +333,7 @@ in the browser, use a localhost server for them to display*/
 .input-group .input {
     border: none;
     flex-grow: 1;
+    width: 0;
 }
 
 .input-group .btn {
@@ -533,6 +551,7 @@ in the browser, use a localhost server for them to display*/
     border: none;
     box-shadow: 0 0 10px 20px #f3f3f3;
     padding: 3rem;
+    margin-bottom: 200px;
 }
 
 .testimonial-image {
@@ -556,6 +575,10 @@ in the browser, use a localhost server for them to display*/
 }
 
 @media screen and (min-width: 768px) {
+    .testimonial {
+        margin-bottom: 140px;
+    }
+
     .testimonial .quote {
         margin-left: 3rem;
     }
@@ -653,8 +676,8 @@ in the browser, use a localhost server for them to display*/
 
 /* Blocks */
 .block {
-    --padding-vertical: 6rem;
-    padding: var(--padding-vertical) 2rem;
+    --padding-vertical: 5rem;
+    padding: 1rem 1rem var(--padding-vertical);
 }
 
 .block-header {
@@ -692,6 +715,12 @@ in the browser, use a localhost server for them to display*/
     margin: 0 auto;
 }
 
+@media screen and (min-width: 768px){
+    .block {
+        padding: 3rem 2rem var(--padding-vertical);
+    }
+}
+
 /* Navigation */
 .nav {
     background: #000;
@@ -699,7 +728,10 @@ in the browser, use a localhost server for them to display*/
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 0 1rem;
+}
+
+.block-dark .nav {
+    background: transparent;
 }
 
 .nav-list {
@@ -777,6 +809,10 @@ in the browser, use a localhost server for them to display*/
     letter-spacing: 1px;
 }
 
+.hero-content .block-heading {
+    padding-top: 2rem;
+}
+
 @media screen and (min-width: 768px) {
     .hero {
         padding-top: 0;
@@ -797,10 +833,11 @@ in the browser, use a localhost server for them to display*/
 }
 
 .domain-prices {
+    color: var(--heading-color);
     font-size: 1.8rem;
     font-weight: 600;
     display: grid;
-    grid-template: repeat(2, auto) / repeat(3, 1fr);
+    grid-template: repeat(3, auto) / repeat(2, 1fr);
     justify-items: center;
     align-items: center;
     row-gap: 15px;
@@ -810,6 +847,12 @@ in the browser, use a localhost server for them to display*/
 
 .domain-prices li {
     white-space: nowrap;
+}
+
+@media screen and (min-width: 768px) {
+    .domain-prices {
+        grid-template: repeat(2, auto) / repeat(3, 1fr);
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -915,6 +958,14 @@ in the browser, use a localhost server for them to display*/
     background: #232323;
 }
 
+.footer .callout {
+    position: relative;
+    top: -230px;
+    margin: 0 auto;
+    margin-bottom: -200px;
+    max-width: 1000px;
+}
+
 .footer-grid {
     column-gap: 4rem;
 }
@@ -934,7 +985,7 @@ in the browser, use a localhost server for them to display*/
     margin-top: 0;
 }
 
-.footer a, li {
+.footer .list a, .footer li {
     color: #777;
     margin: 1.5rem 0;
     text-transform: capitalize;
@@ -958,6 +1009,13 @@ in the browser, use a localhost server for them to display*/
     font-size: 2.1rem;
     color: #fff;
     opacity: 0.3;
+}
+
+@media screen and (min-width: 768px) {
+    .footer .callout {
+        top: -150px;
+        margin-bottom: -110px;
+    }
 }
 
 @media screen and (min-width: 1024px) {
