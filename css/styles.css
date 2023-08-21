@@ -744,6 +744,7 @@ in the browser, use a localhost server for them to display*/
     padding: 0.5rem 2rem;
     border-bottom: 1px solid #222;
     white-space: nowrap;
+    z-index: 1;
 }
 
 .nav-list li a {
